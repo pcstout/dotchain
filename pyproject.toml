@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dotchain"
+version = "0.0.1"
+description = "Python method chaining and piping with asyncio support."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"repository" = "https://github.com/pcstout/dotchain"
+
+[tool.hatch.build]
+only-packages = true
+sources = ["src"]
+artifacts = [
+    "CHANGELOG.md"
+]
+exclude = [
+    "tests"
+]
